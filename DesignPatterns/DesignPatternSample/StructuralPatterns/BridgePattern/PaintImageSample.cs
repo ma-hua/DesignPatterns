@@ -25,7 +25,7 @@ namespace DesignPatternSample.StructuralPatterns.BridgePattern
             var imp = imps.FirstOrDefault(x => x.GetType().GetCustomAttribute<ImpAttribute>().ImpType == impType);
 
             image?.SetImp(imp);
-            image.ParseFile(fileName);
+            image?.ParseFile(fileName);
         }
     }
 }
